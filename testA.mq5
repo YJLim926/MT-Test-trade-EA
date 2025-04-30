@@ -32,14 +32,14 @@ void OnTick(){
 			double ask = SymbolInfoDouble(_Symbol,SYMBOL_ASK);
 			double sl = ask - 42 * SymbolInfoDouble(_Symbol ,SYMBOL_POINT);
 			double tp = ask + 69 * SymbolInfoDouble(_Symbol ,SYMBOL_POINT);
-			trade.Buy(0.1,_Symbol,ask,sl,tp,"not abuse");
+			trade.Buy(0.1,_Symbol,ask,sl,tp,"Test");
 		}
 		if(fastMaArray[0] < slowMaArray[0] && fastMaArray[1] > slowMaArray[1]){
 			Print("Trigger");
 			double bid = SymbolInfoDouble(_Symbol,SYMBOL_BID);
 			double sl = bid + 42 * SymbolInfoDouble(_Symbol,SYMBOL_POINT);
 			double tp = bid - 69 * SymbolInfoDouble(_Symbol,SYMBOL_POINT);
-			trade.Sell(0.1,_Symbol,bid,sl,tp,"not abuse");
+			trade.Sell(0.1,_Symbol,bid,sl,tp,"Test");
 		}
 
 		Comment("\nslowMaArray[0]: ",slowMaArray[0],
